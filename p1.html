@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3 style="text-align: center;">Simple Form</h3>
+    <form style="text-align: center;" id="myform">
+        <label for="name">Enter Your Name</label>
+        <input type="text" id="name" name="name">
+        <br><br>
+        <label for="email">Enter Your Email</label>
+        <input type="text" id="email" name="email">
+        <br><br>
+        <label for="message">Write Your Message</label>
+        <textarea id="massage" name="message"></textarea>
+        <br><br>
+        <input type="button" value="Submit" onclick="printValues()">
+    </form>
+
+    <h3>Your Entered Values Are:</h3>
+    <div id="output"></div>
+
+    <script>
+        function printValues() {
+            let name = document.getElementById("name").value;
+            let email = document.getElementById("email").value;
+            let message = document.getElementById("massage").value;
+
+            let output = "<p> <strong>Name:</strong> " + name + "</p>" +
+                         "<p> <strong>Email:</strong> " + email + "</p>" +
+                         "<p> <strong>Message:</strong> " + message + "</p>";
+
+            document.getElementById("output").innerHTML = output;
+        }
+    </script>
+</body>
+</html>
